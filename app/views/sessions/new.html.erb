@@ -1,0 +1,10 @@
+<h1>Login User</h1>
+
+<%= form_for(:sessions, url: login_path ) do |form| %>
+  <p>
+    User ID: <%= form.text_field :id %>
+  </p>
+  <p>
+    <%= form.submit "Log In"%>
+  </p>
+<% end %>
