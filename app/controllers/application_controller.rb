@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  def log_in(user)
-    cookies.signed[:id] = id
-  end
+  protect_from_forgery with: :exception
+
+  include SessionsHelper
 end

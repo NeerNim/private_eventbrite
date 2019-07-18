@@ -1,7 +1,8 @@
-<h1>Users in the app </h1>
+<h1>New User </h1>
 
-<% @user.each do |user| %>
-  <ul>
-    <li><%= user.email %></li>
-  </ul>
-<% end %>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
