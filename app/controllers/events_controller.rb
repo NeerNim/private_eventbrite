@@ -9,7 +9,6 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.build(post_params)
-
     if @event.save
       redirect_to @event
     else
@@ -18,7 +17,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    
+    @event = Event.all
+    @event_attendees = @event.attendees
   end
 
   private 
