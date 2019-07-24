@@ -1,9 +1,8 @@
 <h1>Events</h1>
-<% @event.each do |event| %>
+<% @events.each do |event| %>
     <h4>Event description<h4>
     <%= event.description %>
-    <%= link_to "Attend Event", event_attendee_show_path(event) %>
     <h4>Attendees</h4>
-    <%= @list_of_attendees %>
+    User Id: <%= event.creator_id %>
     <hr>
 <% end %>

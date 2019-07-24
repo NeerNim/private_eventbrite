@@ -1,8 +1,9 @@
-<h1>New User </h1>
+<h1>User Profile</h1>
 <p>
   <strong>Event:</strong>
   <% @user.events.each do |event| %>
     <%= event.description %>
   <% end %>
 </p>
-<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Edit', edit_user_path(@user) %> | 
+<%= link_to 'Create Event', new_event_path %>

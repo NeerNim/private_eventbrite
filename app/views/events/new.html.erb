@@ -1,6 +1,7 @@
 <h1>Create New Event</h1>
 <%= form_for(@event) do |f| %>
-  <%= f.label :description %>
-  <%= f.text_area :description%>
-  <%= f.submit "Create new event" %>
+  <%= f.label :description %><br>
+  <%= f.text_area :description%><br>
+  <%= f.submit "Create new event" %><br>
+  <%= link_to "Back", events_path %>
 <% end %>

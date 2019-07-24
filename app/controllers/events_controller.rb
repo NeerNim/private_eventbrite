@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @event = Event.all
+    @events = Event.all.order(created_at: :desc)
   end
 
   def new
@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.events.build(post_params)
+    @event = current_user.events.build(event_params)
     if @event.save
       redirect_to @event
     else
@@ -17,12 +17,12 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.all
-    @event_attendees = @event.attendees
+    @event = Event.find(params[:id])
   end
 
   private 
-  def post_params
+  def event_params
     params.require(:event).permit(:description)
   end
 end
+
