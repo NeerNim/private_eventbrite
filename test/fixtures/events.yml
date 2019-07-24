@@ -1,13 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: MyText
+  creator_id: 1
+  title: MyString
+  date: 2019-07-24
+  time: 2019-07-24 12:08:48
   location: MyString
-  time: 2019-07-19 12:01:42
-  date: 2019-07-19
+  description: MyText
 
 two:
-  description: MyText
+  creator_id: 1
+  title: MyString
+  date: 2019-07-24
+  time: 2019-07-24 12:08:48
   location: MyString
-  time: 2019-07-19 12:01:42
-  date: 2019-07-19
+  description: MyText

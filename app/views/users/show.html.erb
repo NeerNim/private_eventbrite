@@ -1,9 +1,12 @@
-<h1>User Profile</h1>
-<p>
-  <strong>Event:</strong>
-  <% @user.events.each do |event| %>
-    <%= event.description %>
+<h1>Upcoming Events:</h1>
+<ul>
+  <% @user.attended_events.each do |attendance| %>
+    <li><%= attendance.title %></li>
   <% end %>
-</p>
-<%= link_to 'Edit', edit_user_path(@user) %> | 
-<%= link_to 'Create Event', new_event_path %>
+</ul>
+<h1>Past Events:</h1>
+<ul>
+  <% @user.attended_events.each do |attendance| %>
+    <li><%= attendance.title %></li>
+  <% end %>
+</ul>

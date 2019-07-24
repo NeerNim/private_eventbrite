@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'event_attendee/new'
-  get 'event_attendee/create'
-  get 'event_attendee/show'
-  resources :sessions
+  root  'events#index'
   resources :users
   resources :events
 
