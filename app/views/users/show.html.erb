@@ -5,16 +5,16 @@
   <div class="col-md-6 col-md-offset-3">
     <h3 class="text-success">Upcoming Events:</h3>
     <% @user.attended_events.each do |attendance| %>
-      <h4><%= attendance.title %></h3>
-      <h4><%= attendance.location %></h4>
-      <h4><%= attendance.date %></h4>
+      <h4><strong>Title:</strong> <%= attendance.title %></h3>
+      <h4><strong>Location:</strong>  <%= attendance.location %></h4>
+      <h4><strong>Date:</strong>  <%= attendance.date %></h4>
       <hr>
     <% end %>
     <h3 class="text-danger">Past Events:</h3>
-    <ul>
-      <% @user.attended_events.each do |attendance| %>
-        <li><%= attendance.title %></li>
+      <% @past_events.each do |attendance| %>
+        <h4>Title: <%= attendance.title %></h4>
+        <h4>Location: <%= attendance.location %></h4>
+        <h4>Date: <%= attendance.date %></h4>
       <% end %>
-    </ul>
   </div>
 </div>

@@ -18,6 +18,8 @@ before_action :correct_user, only: [ :show, :edit, :update]
 
   def show
     @user = User.find(params[:id])
+    @past_events = @user.attended_events.past.order(date: :desc)
+    @future_events = @user.attended_events.upcoming.order(date: :desc)
   end
 
  

@@ -3,11 +3,9 @@
   <div class="col-md-6 col-md-offset-3">
     <h2 style="text-align:left" class="text-success">Upcoming Events:</h2>
     <% @upcoming.each do |event| %>
-      <h3>
-        <%= event.date %>
-        <%= event.time %>
-        <%= event.title %>
-      </h3>
+      <h4><strong>Title:</strong> <%= event.title %></h4>
+      <h4><strong>Date:</strong> <%= event.date %></h4>
+      
       <hr>
     <% end %>
   </div>
@@ -16,11 +14,10 @@
   <div class="col-md-6 col-md-offset-3">
     <h2 style="text-align:left" class="text-danger">Past Events:</h2>
     <% @past.each do |event| %>
-      <h3>
-        <%= event.date %>
-        <%= event.time %>
-        <%= event.title %>
-      </h3>
+      <h4>
+        Title: <%= event.title %><br>
+        Date: <%= event.date %><br>
+      </h4>
       <hr>
     <% end %>
   </div>
