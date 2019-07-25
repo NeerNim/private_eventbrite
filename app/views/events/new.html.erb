@@ -1,8 +1,18 @@
 <h1>Create New Event</h1>
-<%= form_for(@event) do |f| %>
-  <%= f.label :name %><br>
-  <%= f.label :description %><br>
-  <%= f.text_area :description%><br>
-  <%= f.submit "Create new event" %><br>
-  <%= link_to "Back", events_path %>
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@event) do |f| %>
+      <%= f.label :event_title %>
+      <%= f.text_field :title, class: 'form-control'%>
+      <%= f.label :description %>
+      <%= f.text_area :description, class: 'form-control'%>
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control'%>
+      <%= f.label :date, "Date" %>
+      <%= f.date_field :date, class: 'form-control' %>
+      <%= f.label :time, "Time" %>
+      <%= f.time_field :time, class: 'form-control' %>
+      <%= f.submit "Create new event", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

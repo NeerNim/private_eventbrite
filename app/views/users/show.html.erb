@@ -1,12 +1,20 @@
-<h1>Upcoming Events:</h1>
-<ul>
-  <% @user.attended_events.each do |attendance| %>
-    <li><%= attendance.title %></li>
-  <% end %>
-</ul>
-<h1>Past Events:</h1>
-<ul>
-  <% @user.attended_events.each do |attendance| %>
-    <li><%= attendance.title %></li>
-  <% end %>
-</ul>
+<% provide(:title, @user.name) %>
+<h1 class="display-1 text-primary">Welcome <%= @user.name%></h2>
+<h1 class="display-2">My events</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3 class="text-success">Upcoming Events:</h3>
+    <% @user.attended_events.each do |attendance| %>
+      <h4><%= attendance.title %></h3>
+      <h4><%= attendance.location %></h4>
+      <h4><%= attendance.date %></h4>
+      <hr>
+    <% end %>
+    <h3 class="text-danger">Past Events:</h3>
+    <ul>
+      <% @user.attended_events.each do |attendance| %>
+        <li><%= attendance.title %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
