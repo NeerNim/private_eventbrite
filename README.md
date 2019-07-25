@@ -7,11 +7,13 @@ Rails eventbrite app to plan events and keep track of all the events that has be
 ```
 ruby -v 2.6.3
 rails -v 6.0.0
+
 ```
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
 
+```
 $ bundle install 
 ```
 
