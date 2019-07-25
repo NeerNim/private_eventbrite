@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
+  before_action :authorize, only: [:new, :create, :show]
   def index
-    @events = Event.all.order(created_at: :desc)
+    @events = Event.all
+
   end
 
   def new
@@ -10,8 +12,10 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.save
+      flash[:success] = "Your event has been created"
       redirect_to @event
     else
+      flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
@@ -22,7 +26,7 @@ class EventsController < ApplicationController
 
   private 
   def event_params
-    params.require(:event).permit(:description)
+    params.require(:event).permit(:title, :description, :location, :date)
   end
 end
 

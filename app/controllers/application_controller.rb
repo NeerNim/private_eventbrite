@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_user
 
+  private
+  def authorize
+    unless current_user 
+      redirect_to login_path, notice: 'You need to be logged in to create event'
+    end
+  end
 end
