@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'rails-controller-testing'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
+gem  'faker'
 
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
