@@ -1,24 +1,50 @@
-# README
+# Private Eventbrite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails eventbrite app to plan events and keep track of all the events that has been attended. 
 
-Things you may want to cover:
+## Built with 
 
-* Ruby version
+```
+ruby -v 2.6.3
+rails -v 6.0.0
+```
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems:
 
-* Configuration
+$ bundle install 
+```
 
-* Database creation
+seeding database:
+```
+$ rails db:seed
+```
 
-* Database initialization
+Next, migrate the database:
 
-* How to run the test suite
+```
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Finally, run the test suite to verify that everything is working correctly:
 
-* ...
+```
+$ rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+
+# Authors
+* **Afani Martin** - [afani martin](https://github.com/whiz25)
+* **Neer Thapa** - [NeerNim](https://github.com/NeerNim)
+
+## License
+
+MIT License See
+[LICENSE.md](LICENSE.md) for details.
