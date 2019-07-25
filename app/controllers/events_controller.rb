@@ -2,9 +2,11 @@ class EventsController < ApplicationController
   before_action :authorize, only: [:new, :create, :show]
   def index
     @events = Event.all
-
+    @upcoming = Event.upcoming
+    @past = Event.past
   end
 
+  
   def new
     @event = Event.new
   end
@@ -22,6 +24,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @attendees = @event.attendees.all
+    @creator = @event.creator
   end
 
   private 
