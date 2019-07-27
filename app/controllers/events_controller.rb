@@ -15,9 +15,8 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
     if @event.save
       flash[:success] = "Your event has been created"
-      redirect_to @event
+      redirect_to user_events_path
     else
-      flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
@@ -26,6 +25,10 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @attendees = @event.attendees.all
     @creator = @event.creator
+  end
+
+  def user_events
+    @current_user_events = current_user.events.all    
   end
 
   private 
