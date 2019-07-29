@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+<h1 class="display-2">Manage Events</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3 class="text-success">Upcoming Events:</h3>
+    <% @future_events.each do |attendance| %>
+      <h4><strong>Title:</strong> <%= attendance.title %></h3>
+      <h4><strong>Location:</strong>  <%= attendance.location %></h4>
+      <h4><strong>Date:</strong>  <%= attendance.date %></h4>
+      <hr>
+    <% end %>
+    <h3 class="text-danger">Past Events:</h3>
+    <% @past_events.each do |attendance| %>
+      <h4>Title: <%= attendance.title %></h4>
+      <h4>Location: <%= attendance.location %></h4>
+      <h4>Date: <%= attendance.date %></h4>
+    <% end %>
+  </div>
+</div>
