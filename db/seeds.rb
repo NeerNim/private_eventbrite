@@ -34,7 +34,7 @@ end
 
 first = Event.first
 
-User.limit().each do |user|
+User.limit(8).each do |user|
   Attendance.create(event_id: first.id, attendee_id: user.id)
 end
 
