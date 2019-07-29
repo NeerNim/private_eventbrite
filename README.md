@@ -16,18 +16,16 @@ To get started with the app, clone the repo and then install the needed gems:
 ```
 $ bundle install 
 ```
-
-seeding database:
-```
-$ rails db:seed
-```
-
 Next, migrate the database:
 
 ```
 $ rails db:migrate
 ```
 
+seeding database:
+```
+$ rails db:seed
+```
 
 Finally, run the test suite to verify that everything is working correctly:
 
@@ -41,6 +39,9 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
+## Features to Add
+- User can attend other events from UI (Very important for this app to make it realistic)
+- User can invite others to attend their event (Extra and Optional)
 
 # Authors
 * **Afani Martin** - [afani martin](https://github.com/whiz25)
