@@ -9,7 +9,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bcrypt'
 gem 'rails-controller-testing'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'sass-rails', '~> 5'
 gem  'faker'
 
